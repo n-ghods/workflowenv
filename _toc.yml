@@ -5,7 +5,7 @@ format: jb-book
 root: landing_page
 
 parts:
-- caption: Get started
+- caption: Gettin started
   chapters:
   - file: intro
     title: Introduction to DEM calibration
@@ -23,15 +23,15 @@ parts:
   - file: Use_Case_3_Create_store_and_explore_the relational_datanodes
     title: Working with relational data 
   - file: Use_Case_4_Calibration_Strategy_(Meta_task)
-    title: Calibration startegy 
+    title: Calibration strategy 
   - file: Use_Case_5_Run_a_Successful_Calibration
-    title: Run a suucessful calibration case
+    title: Run a calibration task
     sections:
     - file: Use_Case_5.1_preparing_input_for_calibration
       title: Preparing input for calibration
     - file: Use_Case_5.2_Start_Run_and_check_calibration
-      title: Start, Run and Check Calibration
+      title: Start, run and check calibration progress
     - file: Use_Case_5.3_Commit_calibration_results_to_the_DB
-      title: Committing calibration result to the DB
+      title: Committing calibration result to the database
   - file: Use_Case_6_Run_Simulation_with_calibrated_parameters
-    title: Run DEM simulation with calibrated parameters
+    title: Run a DEM simulation with calibrated parameters
