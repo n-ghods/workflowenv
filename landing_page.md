@@ -1,6 +1,9 @@
-# The Calibration workflow environment
+# The Calibration Workflow Environment WORKFORCE
 
-This a workflow environment, developed within the [Caliper project](https://caliper-itn.org/) for the calibration of the discrete element modelling (DEM) of granular material. The workflow is developed within the [Orange3](https://orangedatamining.com/) python-based graphical data mining tool, in order to create an automated integration of experimental and simulation results and speed up the calibration process.
+This website documents a workflow environment, developed within the [Caliper project](https://caliper-itn.org/) for the calibration of the discrete element models (DEM) that are used to simulate granular materials. Core parts of hhe workflow are developed within the [Orange3](https://orangedatamining.com/) python-based graphical data mining tool. 
+The goal of the environment is to create an automated integration of experimental and simulation results and speed up the calibration process.
+
+"WORKFORCE" stands for: 	**WORK**flow environment **FOR** the **C**alibration of D**E**M parameters
 
 # Acknowledgment
 
