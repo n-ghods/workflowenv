@@ -5,7 +5,7 @@ format: jb-book
 root: landing_page
 
 parts:
-- caption: Gettin started
+- caption: Getting started
   chapters:
   - file: intro
     title: Introduction to DEM calibration
