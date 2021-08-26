@@ -248,6 +248,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-case-description">
+   5.1.1. Use-case description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   5.1.2. Workflow
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,6 +276,8 @@
                 
   <div class="section" id="preparing-input-for-calibration">
 <h1><span class="section-number">5.1. </span>Preparing Input for Calibration<a class="headerlink" href="#preparing-input-for-calibration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-case-description">
+<h2><span class="section-number">5.1.1. </span>Use-case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System:  LIGGGHTS (or Aspherix) - (distributed by DCS Computing GmbH)</p>
 <p>This use case describes how to prepare initial input for each calibration workflow.</p>
 <table class="colwidths-auto table">
@@ -308,6 +328,25 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="workflow">
+<h2><span class="section-number">5.1.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>This use-case can be specific to the calibration-method and the required input data-types the chosen calibration templates. Here we are using the Aspherix-5.2.1 calibration tool. Each calibration workflow is called “calibration template”. And as for any DEM simulation, the required input files should be gathered.</p>
+<p>One can find more details on the Aspherix Documentation files, but here is a brief description of the required input scripts:</p>
+<p><strong>Calibration setup:</strong> aspherix-calibration.casx</p>
+<p>**measurements: **a directory containing text files with the measured quantities from experiment</p>
+<p><strong>settings:</strong> a directory with text files with the required simulation settings:</p>
+<ul class="simple">
+<li><p><strong>parameters_numerical.txt</strong> (every information that is needed to run the simulation, like the the number processors, number of iterations, number of chunks in cluster mode running, etc.)</p></li>
+<li><p><strong>parameters_material_contacts.txt</strong> (all the per-particle and per-contact properties should be initialized in this file)</p></li>
+<li><p><strong>model_contact.txt</strong> (based on the contact model that is chosen for the simulation, all the model parameters should be initialized and suitable settings being selected in this file)</p></li>
+<li><p><strong>parameters_particle_sizes.txt</strong> (the particles sizes and information related to their distribution)</p></li>
+<li><p><strong>parameters_tests.txt</strong> (any experiment-specific parameter e.g. shear rate, drum rotation speed, normal stress during pre-shearing, etc.)</p></li>
+</ul>
+<p><strong>Note:</strong> (all input data should be provided as CSV-like data files)</p>
+<p>Since all the above files are prepared in <em>.csv</em> format, they can all be visualized and inspected within the Orange3 environment with the “CSV File Import” widget.</p>
+<p><img alt="uc52_1" src="_images/uc51_1.png" /></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
