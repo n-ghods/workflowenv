@@ -248,6 +248,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-case-description">
+   5.3.1. Use-case description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   5.3.2. Workflow
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,6 +276,8 @@
                 
   <div class="section" id="use-case-5-3-commit-calibration-results-to-the-db">
 <h1><span class="section-number">5.3. </span>Use Case 5.3 - Commit Calibration Results to the DB<a class="headerlink" href="#use-case-5-3-commit-calibration-results-to-the-db" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-case-description">
+<h2><span class="section-number">5.3.1. </span>Use-case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System:  LIGGGHTS (or Aspherix) - (distributed by DCS Computing GmbH)</p>
 <p>This use case describes how to commit successful calibration results to the DB.</p>
 <table class="colwidths-auto table">
@@ -308,6 +328,12 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="workflow">
+<h2><span class="section-number">5.3.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>Simply by the features of the use-case 1 and 3, the successful calibration cases can be submitted to the data base. Similar to the use-case 1, the meta-data is created from the <em><strong>log_aspherix-calibration.txt</strong></em> file as well as the calibrated parameters, <em><strong>calibrated_params.txt</strong></em>.</p>
+<p>With the above two files, one can setup any other DEM simulation with these sets of parameters. To assess the calibration workflow, the history of the quality function can be saved and then visualized within the workflow. It is not necessary to save all the working directories of all simulations, but the path to the storage location is stored in the metadata file.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

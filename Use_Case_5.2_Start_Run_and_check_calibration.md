@@ -1,6 +1,8 @@
 Start, Run and Check the Calibration
 ======================
 
+## Use-case description
+
 Sub-System:  LIGGGHTS (or Aspherix) - (distributed by DCS Computing GmbH) 
 
 This use case describes how to start and run a successful calibration case.
@@ -21,3 +23,9 @@ This use case describes how to start and run a successful calibration case.
 | Technology and Data Variations List | -                                                            |
 | Frequency of Occurrence             | upon request for each calibration workflow                   |
 | Miscellaneous                       | -                                                            |
+
+## Workflow
+
+When all the data are at hand, we can start running the calibration workflow. Since the calibration usually involves iterating over a large number of simulations and optimization methods to obtain the calibrated set of parameters, this job is usually submitted to clusters and HPCs. However for small workflows it can also be done on your computer by calling the calibration process directly from orange3 workflow:
+
+ ![uc52_1](../workflowenv/images/uc52_1.PNG)

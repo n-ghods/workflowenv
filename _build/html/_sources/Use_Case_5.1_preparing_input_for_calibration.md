@@ -32,7 +32,7 @@ One can find more details on the Aspherix Documentation files, but here is a bri
 
 **Calibration setup:** aspherix-calibration.casx
 
-**measurements: **a directory containing text files with the measured quantities from experiment
+**measurements: ** a directory containing text files with the measured quantities from experiment
 
 **settings:** a directory with text files with the required simulation settings:
 
