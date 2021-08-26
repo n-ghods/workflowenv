@@ -14,7 +14,7 @@ Specifically, DEMvironment consists of a set of individual workforces that are c
 
 While DEMvironment was build with [ASPHERIX(R)](https://www.aspherix-dem.com/) and [LIGGGHTS(R)](https://www.cfdem.com/liggghts-open-source-discrete-element-method-particle-simulation-code#:~:text=LIGGGHTS%20is%20an%20Open%20Source,the%20field%20of%20Molecular%20Dynamics.) as the main work horses, it can be easily equipped with adaptors for any other DEM simulation or calibration tool.
 
-![](../workflowenv/images/aspherix_logo.png)
+![aspherix](../workflowenv/images/aspherix_logo.png)
 
-![](../workflowenv/images/liggghts.png) 
+![liggghts](../workflowenv/images/liggghts.png) 
 
