@@ -2,6 +2,8 @@
 Creating, storing and exploring relational data-nodes in DB (from literature)
 ======================
 
+## Use-case description
+
 Sub-System: python3 (workflow environment: i.e. orange3)
 
 This use case describes how to create relational data-nodes (e.g. any empirical or theoretical equations reported in literature) in the database, store the data and metadata, explore committed relational data, and retrieve them.
@@ -22,3 +24,34 @@ This use case describes how to create relational data-nodes (e.g. any empirical 
 | Technology and Data Variations List | -                                                            |
 | Frequency of Occurrence             | Whenever an input from or comparison with literature data is necessary in the calibration process. |
 | Miscellaneous                       | -                                                            |
+
+## Workflow
+
+This feature is a python3 package developed by Richard Amering, as a part of his bachelor project. This package includes several modules, such as relationalData and numericalData, along with their specific metadata classes. 
+
+It also includes a high-level database interface to store and retrieve data-nodes to and from file-system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.
+
+For instance, one can create relational data node from an equation/correlation, given in literature:
+
+```python
+from math import pi, log as ln
+
+def CantorCompactionEqu6(phi, phi_0, phi_max, alpha, b, k, Z_0):
+    P_star = (
+        - b*phi/(2*pi) * (Z_0 + k*(phi-phi_0)**alpha) *
+        ln((phi_max-phi)/(phi_max-phi_0)))
+    return P_star
+
+from pkg import DataFactory
+equation_one = DataFactory.from_relation(CantorCompactionEqu6)
+print(equation_one.metadata)
+#or update data:
+equation_two = DataFactory.from_relation(
+    CantorCompactionEqu6,
+    name="equ2", creator="Richard",
+    author="Cantor", doi="10.1103/PhysRevLett.124.208003")
+
+```
+
+ 
+
