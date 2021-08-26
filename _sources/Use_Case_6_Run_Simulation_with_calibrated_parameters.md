@@ -1,6 +1,8 @@
 Run DEM simulations with calibrated parameters (validation)
 ======================
 
+## Use-case Description
+
 Sub-System:  LIGGGHTS (or Aspherix or any DEM software) 
 
 This use case describes how to run a simulation with calibrated DEM parameters. It has to be noted that if this simulation is performed in order to validate the calibration procedure, the validation experiment should be sensitive to the calibrated parameters and should not be similar to the experiments that were used for the calibration.
