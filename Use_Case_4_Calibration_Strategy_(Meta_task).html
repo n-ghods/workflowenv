@@ -248,6 +248,62 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-case-description">
+   4.1. Use-case description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   4.2. Workflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dependence-of-micro-macro-properties-for-cohesionless-bulk-material-under-rapid-flow-conditions-0-1-m-s-and-low-consolidation-100-kpa">
+     4.2.1. Dependence of Micro-Macro properties for
+     <strong>
+      cohesionless
+     </strong>
+     bulk material under
+     <strong>
+      rapid flow conditions (&gt;0.1 m/s)
+     </strong>
+     and
+     <strong>
+      low consolidation (&lt;100 kPa)
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automatized-calibration-workflow-for-dem-models-of-cohesive-powders-exhibiting-bulk-volume-loss-of-up-to-25-after-uniaxial-consolidation-up-to-10-kpa">
+     4.2.2. Automatized calibration workflow for DEM models of Cohesive powders exhibiting bulk volume loss of up to 25% (after uniaxial consolidation up to 10 kPa)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-standard-procedure-to-calibrate-friction-coefficients-in-dem-simulation-of-cohesionless-bulk-material">
+     4.2.3. A standard procedure to calibrate friction coefficients in DEM Simulation of cohesionless bulk material
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calibration-of-dem-parameters-of-cohesive-bulk-materials-by-only-using-lifting-of-a-hollow-cylinder">
+     4.2.4. Calibration of DEM parameters of cohesive bulk materials by only using lifting of a hollow cylinder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#proposed-calibration-and-validation-method-for-modelling-of-cylindrical-pellets">
+     4.2.5. Proposed calibration and validation method for modelling of Cylindrical Pellets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,6 +314,8 @@
                 
   <div class="section" id="deciding-about-the-calibration-strategy-meta-task">
 <h1><span class="section-number">4. </span>Deciding about the calibration strategy (Meta-task)<a class="headerlink" href="#deciding-about-the-calibration-strategy-meta-task" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-case-description">
+<h2><span class="section-number">4.1. </span>Use-case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System: -</p>
 <p>This use case describes how to decide on the required experiment(s)/template(s) that should be used for the specific application that the DEM-parameter calibration is performed. the calibration tests should consider the nature of the real process which should be simulated and therefore the calibration process should be selected accordingly. The target flow situation (e.g. quasi-static, slow, high dynamical bulk material flow), material characteristics (extent of deformability, plasticity, cohesiveness, …), and the suitable contact model and its required parameters should be taken into account. Since multiple combination of parameters can produce the target bulk response in every experiment, it is highly recommended to use either more than one experiment or to aim for more than one target measured response.</p>
 <table class="colwidths-auto table">
@@ -308,6 +366,49 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="workflow">
+<h2><span class="section-number">4.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>Based on the above-described criteria (the application and desired flow situation, contact model, particle property, etc. ), the user should choose the suitable experiments and calibration templates in the calibration workflow. Despite numerous studies and proposed workflows for the calibration of DEM parameters, there is no universal method for the calibration of DEM parameters. And the users should be very careful with defining the workflows, making sure that the group of calibrated parameters are general, since multiple combination of parameters can lead to the same bulk response in single experiments.</p>
+<p>Here you can see a summarized illustration of some proposed workflows in recent literature:</p>
+<div class="section" id="dependence-of-micro-macro-properties-for-cohesionless-bulk-material-under-rapid-flow-conditions-0-1-m-s-and-low-consolidation-100-kpa">
+<h3><span class="section-number">4.2.1. </span>Dependence of Micro-Macro properties for <strong>cohesionless</strong> bulk material under <strong>rapid flow conditions (&gt;0.1 m/s)</strong> and <strong>low consolidation (&lt;100 kPa)</strong><a class="headerlink" href="#dependence-of-micro-macro-properties-for-cohesionless-bulk-material-under-rapid-flow-conditions-0-1-m-s-and-low-consolidation-100-kpa" title="Permalink to this headline">¶</a></h3>
+<p>Reference : <a class="reference external" href="https://www.researchgate.net/publication/334129169_Calibration_of_DEM_Parameters_for_Cohesionless_Bulk_Materials_under_Rapid_Flow_Conditions_and_Low_Consolidation">Katterfeld et al. (2019)</a></p>
+<p><img alt="usc4_1" src="_images/uc4_1.png" /></p>
+<p><img alt="uc4_2" src="_images/uc4_2.png" /></p>
+</div>
+<div class="section" id="automatized-calibration-workflow-for-dem-models-of-cohesive-powders-exhibiting-bulk-volume-loss-of-up-to-25-after-uniaxial-consolidation-up-to-10-kpa">
+<h3><span class="section-number">4.2.2. </span>Automatized calibration workflow for DEM models of Cohesive powders exhibiting bulk volume loss of up to 25% (after uniaxial consolidation up to 10 kPa)<a class="headerlink" href="#automatized-calibration-workflow-for-dem-models-of-cohesive-powders-exhibiting-bulk-volume-loss-of-up-to-25-after-uniaxial-consolidation-up-to-10-kpa" title="Permalink to this headline">¶</a></h3>
+<p>Reference: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591019310137?via%3Dihub#f0085">Orefice and Khinast (2019)</a></p>
+<p><strong>Contact model</strong>: <a class="reference external" href="https://link.springer.com/article/10.1007%2Fs10035-008-0099-x">adhesive elasto-plastic model</a></p>
+<p><img alt="uc4_3" src="_images/uc4_3.png" /></p>
+<p><img alt="uc4_4" src="_images/uc4_4.png" /></p>
+</div>
+<div class="section" id="a-standard-procedure-to-calibrate-friction-coefficients-in-dem-simulation-of-cohesionless-bulk-material">
+<h3><span class="section-number">4.2.3. </span>A standard procedure to calibrate friction coefficients in DEM Simulation of cohesionless bulk material<a class="headerlink" href="#a-standard-procedure-to-calibrate-friction-coefficients-in-dem-simulation-of-cohesionless-bulk-material" title="Permalink to this headline">¶</a></h3>
+<p>Ref.: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591018309380?via%3Dihub">Roessler et al. (2019)</a></p>
+<p><img alt="uc4_5" src="_images/uc4_5.png" /></p>
+<p>*this modified draw down test is enough on its own to give a unique set of parameters</p>
+<p>A large number of simulations are carried out, for each range of the friction coefficients and then the parameter set selected by superimposition of the response surfaces.</p>
+<p><img alt="uc4_6" src="_images/uc4_6.png" /></p>
+</div>
+<div class="section" id="calibration-of-dem-parameters-of-cohesive-bulk-materials-by-only-using-lifting-of-a-hollow-cylinder">
+<h3><span class="section-number">4.2.4. </span>Calibration of DEM parameters of cohesive bulk materials by only using lifting of a hollow cylinder<a class="headerlink" href="#calibration-of-dem-parameters-of-cohesive-bulk-materials-by-only-using-lifting-of-a-hollow-cylinder" title="Permalink to this headline">¶</a></h3>
+<p>Ref.: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591018309380?via%3Dihub">Roessler and Katterfeld (2019)</a></p>
+<p><strong>Contact model</strong>: Hertz with a simplified JKR cohesion model and modified elasto-plastic spring-dashpot model (Wensrich et al. 2012)</p>
+<p><img alt="uc4_7" src="_images/uc4_7.png" /></p>
+<p><img alt="uc4_8" src="_images/uc4_8.png" /></p>
+<p><img alt="uc_9" src="_images/uc4_9.png" /></p>
+<p>* refer to the algorithm below:</p>
+<p><img alt="uc4_10" src="_images/uc4_10.png" /></p>
+</div>
+<div class="section" id="proposed-calibration-and-validation-method-for-modelling-of-cylindrical-pellets">
+<h3><span class="section-number">4.2.5. </span>Proposed calibration and validation method for modelling of Cylindrical Pellets<a class="headerlink" href="#proposed-calibration-and-validation-method-for-modelling-of-cylindrical-pellets" title="Permalink to this headline">¶</a></h3>
+<p>Ref.: <a class="reference external" href="https://www.jstage.jst.go.jp/article/kona/32/0/32_2015016/_article/-char/ja/">Marigo and Stitt (2015)</a></p>
+<p><img alt="uc4_11" src="_images/uc4_11.png" /></p>
+<p><img alt="uc4_12" src="_images/uc4_12.png" /></p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
