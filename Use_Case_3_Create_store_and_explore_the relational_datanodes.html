@@ -248,6 +248,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-case-description">
+   3.1. Use-case description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   3.2. Workflow
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,6 +276,8 @@
                 
   <div class="section" id="creating-storing-and-exploring-relational-data-nodes-in-db-from-literature">
 <h1><span class="section-number">3. </span>Creating, storing and exploring relational data-nodes in DB (from literature)<a class="headerlink" href="#creating-storing-and-exploring-relational-data-nodes-in-db-from-literature" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-case-description">
+<h2><span class="section-number">3.1. </span>Use-case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System: python3 (workflow environment: i.e. orange3)</p>
 <p>This use case describes how to create relational data-nodes (e.g. any empirical or theoretical equations reported in literature) in the database, store the data and metadata, explore committed relational data, and retrieve them.</p>
 <table class="colwidths-auto table">
@@ -308,6 +328,32 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="workflow">
+<h2><span class="section-number">3.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>This feature is a python3 package developed by Richard Amering, as a part of his bachelor project. This package includes several modules, such as relationalData and numericalData, along with their specific metadata classes.</p>
+<p>It also includes a high-level database interface to store and retrieve data-nodes to and from file-system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.</p>
+<p>For instance, one can create relational data node from an equation/correlation, given in literature:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span> <span class="k">as</span> <span class="n">ln</span>
+
+<span class="k">def</span> <span class="nf">CantorCompactionEqu6</span><span class="p">(</span><span class="n">phi</span><span class="p">,</span> <span class="n">phi_0</span><span class="p">,</span> <span class="n">phi_max</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">Z_0</span><span class="p">):</span>
+    <span class="n">P_star</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">phi</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">Z_0</span> <span class="o">+</span> <span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">phi</span><span class="o">-</span><span class="n">phi_0</span><span class="p">)</span><span class="o">**</span><span class="n">alpha</span><span class="p">)</span> <span class="o">*</span>
+        <span class="n">ln</span><span class="p">((</span><span class="n">phi_max</span><span class="o">-</span><span class="n">phi</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">phi_max</span><span class="o">-</span><span class="n">phi_0</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">P_star</span>
+
+<span class="kn">from</span> <span class="nn">pkg</span> <span class="kn">import</span> <span class="n">DataFactory</span>
+<span class="n">equation_one</span> <span class="o">=</span> <span class="n">DataFactory</span><span class="o">.</span><span class="n">from_relation</span><span class="p">(</span><span class="n">CantorCompactionEqu6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">equation_one</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+<span class="c1">#or update data:</span>
+<span class="n">equation_two</span> <span class="o">=</span> <span class="n">DataFactory</span><span class="o">.</span><span class="n">from_relation</span><span class="p">(</span>
+    <span class="n">CantorCompactionEqu6</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;equ2&quot;</span><span class="p">,</span> <span class="n">creator</span><span class="o">=</span><span class="s2">&quot;Richard&quot;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Cantor&quot;</span><span class="p">,</span> <span class="n">doi</span><span class="o">=</span><span class="s2">&quot;10.1103/PhysRevLett.124.208003&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
