@@ -85,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="landing_page.html">
-   The Calibration Workflow Environment WORKFORCE
+   The Calibration Workflow Environment (DEMvironment)
   </a>
  </li>
 </ul>
@@ -248,6 +248,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-case-description">
+   1.1. Use-Case description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   1.2. Workflow
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,6 +276,8 @@
                 
   <div class="section" id="committing-numerical-data-to-database-from-a-simulation">
 <h1><span class="section-number">1. </span>Committing Numerical Data to Database (from a Simulation)<a class="headerlink" href="#committing-numerical-data-to-database-from-a-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-case-description">
+<h2><span class="section-number">1.1. </span>Use-Case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System: LIGGGHTS (distributed by DCS Computing GmbH)</p>
 <p>This use case describes how to commit data (incl. the metadata, simulation’s input and reference parameters, all the simulation output files -either heavy raw outputs or averaged outputs-, and the status/validity of the results) to a database to be later used in a workflow management tool, e.g., to calibrate DEM models.</p>
 <table class="colwidths-auto table">
@@ -308,6 +328,20 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="workflow">
+<h2><span class="section-number">1.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>In order to store any numerical data to the data base, first a <strong>metadata</strong> file should be created to store the essential information about the committed data. For this aim, critical information about each submitted numerical dataset is obtained form the <em>logfile</em> of the executed simulation and is written to a <em><strong>metadata.json</strong></em> file with a unique identifier (uuid). This is done by <em>metadatawriter</em> python script.</p>
+<p>The data are mainly categorized based on their flow situations, in the data-base and structured as below:</p>
+<p><strong>Master Layout:</strong> database_CALIPER/&lt;<strong>flow situation</strong>&gt;/</p>
+<p>for instance:</p>
+<ul class="simple">
+<li><p>database_CALIPER/<strong>shearLE_01</strong></p></li>
+<li><p>database_CALIPER/<strong>uniComp_01</strong>/</p></li>
+</ul>
+<p>And then are stored based on the different properties: database_CALIPER/&lt;<strong>flow situation</strong>&gt;/&lt;<strong>main geometrical feature of the situation</strong>&gt;/&lt;<strong>particle prop 1</strong>&gt;/&lt;<strong>particle prop 2</strong>&gt;/&lt;<strong>softwareShortCut_first 7-digit uuid</strong>&gt;</p>
+<p>e.g. :database_CALIPER/shearLE_01/phi_0.990/fric_0.00/nu_0.00/lig_shortuuid/</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
