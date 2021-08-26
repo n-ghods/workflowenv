@@ -6,7 +6,5 @@ This a workflow environment, developed within the [Caliper project](https://cali
 
 The Caliper project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska Curie grant agreement No. 812638.
 
-![](C:\Users\Orangepanda\workflowenv\workflowenv\EUCaliper.PNG)
-
-
+![EUCaliper](../workflowenv/images/EUCaliper.png)
 

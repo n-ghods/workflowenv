@@ -35,3 +35,6 @@ parts:
       title: Committing calibration result to the DB
   - file: Use_Case_6_Run_Simulation_with_calibrated_parameters
     title: Run DEM simulation with calibrated parameters
+- caption: Tutorials
+  chapters:
+  - file: alaki
