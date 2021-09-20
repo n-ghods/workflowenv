@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Deciding about the calibration strategy (Meta-task) &#8212; Calibration Workflow Environment</title>
+    <title>4. Calibration strategy Selection (Meta-task) &#8212; Calibration Workflow Environment</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -129,7 +129,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Calibration strategy
+   4. Calibration strategy Selection
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -251,7 +251,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-case-description">
@@ -312,12 +312,12 @@
         
               <div>
                 
-  <div class="section" id="deciding-about-the-calibration-strategy-meta-task">
-<h1><span class="section-number">4. </span>Deciding about the calibration strategy (Meta-task)<a class="headerlink" href="#deciding-about-the-calibration-strategy-meta-task" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="calibration-strategy-selection-meta-task">
+<h1><span class="section-number">4. </span>Calibration strategy Selection (Meta-task)<a class="headerlink" href="#calibration-strategy-selection-meta-task" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="use-case-description">
 <h2><span class="section-number">4.1. </span>Use-case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System: -</p>
-<p>This use case describes how to decide on the required experiment(s)/template(s) that should be used for the specific application that the DEM-parameter calibration is performed. the calibration tests should consider the nature of the real process which should be simulated and therefore the calibration process should be selected accordingly. The target flow situation (e.g. quasi-static, slow, high dynamical bulk material flow), material characteristics (extent of deformability, plasticity, cohesiveness, …), and the suitable contact model and its required parameters should be taken into account. Since multiple combination of parameters can produce the target bulk response in every experiment, it is highly recommended to use either more than one experiment or to aim for more than one target measured response.</p>
+<p>This use case describes how to decide on the required experiment(s)/template(s) that should be used for the specific application that the DEM-parameter calibration is performed for. the calibration tests should consider the nature of the real process which should be simulated and therefore the calibration process should be selected accordingly. The target flow situation (e.g. quasi-static, slow, high dynamical bulk material flow), material characteristics (extent of deformability, plasticity, cohesiveness, …), and the suitable contact model and its required parameters should be taken into account. Since multiple combination of parameters can produce the target bulk response in every experiment, it is highly recommended to use either more than one experiment or to aim for more than one target measured response.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Section</p></th>
@@ -369,44 +369,43 @@
 </div>
 <div class="section" id="workflow">
 <h2><span class="section-number">4.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<p>Based on the above-described criteria (the application and desired flow situation, contact model, particle property, etc. ), the user should choose the suitable experiments and calibration templates in the calibration workflow. Despite numerous studies and proposed workflows for the calibration of DEM parameters, there is no universal method for the calibration of DEM parameters. And the users should be very careful with defining the workflows, making sure that the group of calibrated parameters are general, since multiple combination of parameters can lead to the same bulk response in single experiments.</p>
-<p>Here you can see a summarized illustration of some proposed workflows in recent literature:</p>
+<p>Based on the above-described criteria (the application and desired flow situation, contact model, particle property, etc. ), the user should choose suitable experiments and calibration templates in the calibration tool to be used (e.g., Aspherix Calibration). Despite numerous studies and proposed workflows for the calibration of DEM parameters have been published, there is no universal strategy for the calibration of DEM parameters. Thus, the users should be careful when defining the actual calibration calculations, making sure that the set of calibrated parameters reflects the real-world material as good as possible. This is since multiple combination of parameters can lead to the same bulk response.</p>
+<p>Below we provide calibration strategies for different types of materials that have been suggested in literature:</p>
 <div class="section" id="dependence-of-micro-macro-properties-for-cohesionless-bulk-material-under-rapid-flow-conditions-0-1-m-s-and-low-consolidation-100-kpa">
 <h3><span class="section-number">4.2.1. </span>Dependence of Micro-Macro properties for <strong>cohesionless</strong> bulk material under <strong>rapid flow conditions (&gt;0.1 m/s)</strong> and <strong>low consolidation (&lt;100 kPa)</strong><a class="headerlink" href="#dependence-of-micro-macro-properties-for-cohesionless-bulk-material-under-rapid-flow-conditions-0-1-m-s-and-low-consolidation-100-kpa" title="Permalink to this headline">¶</a></h3>
 <p>Reference : <a class="reference external" href="https://www.researchgate.net/publication/334129169_Calibration_of_DEM_Parameters_for_Cohesionless_Bulk_Materials_under_Rapid_Flow_Conditions_and_Low_Consolidation">Katterfeld et al. (2019)</a></p>
-<p><img alt="usc4_1" src="_images/uc4_1.png" /></p>
-<p><img alt="uc4_2" src="_images/uc4_2.png" /></p>
+<p>A workflow for the calibration of cohesionless bulk material under the above application conditions has been introduced by Katterfeld et al. They have also demonstrated the extent of the influence of DEM micro properties (e.g. contact stiffness, sliding/rolling frictions, particle shape, density etc.) on the measured Bulk properties (macro properties) and have listed the sensitive experiments to the the specific bulk material properties.</p>
 </div>
 <div class="section" id="automatized-calibration-workflow-for-dem-models-of-cohesive-powders-exhibiting-bulk-volume-loss-of-up-to-25-after-uniaxial-consolidation-up-to-10-kpa">
 <h3><span class="section-number">4.2.2. </span>Automatized calibration workflow for DEM models of Cohesive powders exhibiting bulk volume loss of up to 25% (after uniaxial consolidation up to 10 kPa)<a class="headerlink" href="#automatized-calibration-workflow-for-dem-models-of-cohesive-powders-exhibiting-bulk-volume-loss-of-up-to-25-after-uniaxial-consolidation-up-to-10-kpa" title="Permalink to this headline">¶</a></h3>
 <p>Reference: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591019310137?via%3Dihub#f0085">Orefice and Khinast (2019)</a></p>
-<p><strong>Contact model</strong>: <a class="reference external" href="https://link.springer.com/article/10.1007%2Fs10035-008-0099-x">adhesive elasto-plastic model</a></p>
+<p>Orefice and Khinast have introduced a workflow for calibration of cohesive powders. The contact model that they have used is the <a class="reference external" href="https://link.springer.com/article/10.1007%2Fs10035-008-0099-x">adhesive elasto-plastic model</a> and in the table below, the employed experiments have been shown:</p>
 <p><img alt="uc4_3" src="_images/uc4_3.png" /></p>
-<p><img alt="uc4_4" src="_images/uc4_4.png" /></p>
+<p>with their workflow the sliding and rolling friction as well as the cohesive and plastic stiffness of particles can be calibrated.</p>
 </div>
 <div class="section" id="a-standard-procedure-to-calibrate-friction-coefficients-in-dem-simulation-of-cohesionless-bulk-material">
 <h3><span class="section-number">4.2.3. </span>A standard procedure to calibrate friction coefficients in DEM Simulation of cohesionless bulk material<a class="headerlink" href="#a-standard-procedure-to-calibrate-friction-coefficients-in-dem-simulation-of-cohesionless-bulk-material" title="Permalink to this headline">¶</a></h3>
 <p>Ref.: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591018309380?via%3Dihub">Roessler et al. (2019)</a></p>
+<p>Roessler et al. have defined an effective method to calibrate the friction coefficients of cohesionless bulk material in DEM. in the bellowed table you can see sensitive experiments that have been utilized for the calibration based on the flow regime of the particulate system.</p>
 <p><img alt="uc4_5" src="_images/uc4_5.png" /></p>
-<p>*this modified draw down test is enough on its own to give a unique set of parameters</p>
+<p>***** this modified draw down test is enough on its own to give a unique set of parameters</p>
 <p>A large number of simulations are carried out, for each range of the friction coefficients and then the parameter set selected by superimposition of the response surfaces.</p>
-<p><img alt="uc4_6" src="_images/uc4_6.png" /></p>
 </div>
 <div class="section" id="calibration-of-dem-parameters-of-cohesive-bulk-materials-by-only-using-lifting-of-a-hollow-cylinder">
 <h3><span class="section-number">4.2.4. </span>Calibration of DEM parameters of cohesive bulk materials by only using lifting of a hollow cylinder<a class="headerlink" href="#calibration-of-dem-parameters-of-cohesive-bulk-materials-by-only-using-lifting-of-a-hollow-cylinder" title="Permalink to this headline">¶</a></h3>
 <p>Ref.: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0032591018309380?via%3Dihub">Roessler and Katterfeld (2019)</a></p>
 <p><strong>Contact model</strong>: Hertz with a simplified JKR cohesion model and modified elasto-plastic spring-dashpot model (Wensrich et al. 2012)</p>
+<p>In the following table the four different phases in the lifiting cylinder experiment of cohesive material is summerized:</p>
 <p><img alt="uc4_7" src="_images/uc4_7.png" /></p>
-<p><img alt="uc4_8" src="_images/uc4_8.png" /></p>
+<p>The introduced workflow includes a pre-calibration stage in which the range for the cohesion energy density is determined followed by the calibration stage where cohesive particles’ micro properties are calibrated.</p>
 <p><img alt="uc_9" src="_images/uc4_9.png" /></p>
-<p>* refer to the algorithm below:</p>
-<p><img alt="uc4_10" src="_images/uc4_10.png" /></p>
+<p>***** refers to the algorithm shown in their article.</p>
 </div>
 <div class="section" id="proposed-calibration-and-validation-method-for-modelling-of-cylindrical-pellets">
 <h3><span class="section-number">4.2.5. </span>Proposed calibration and validation method for modelling of Cylindrical Pellets<a class="headerlink" href="#proposed-calibration-and-validation-method-for-modelling-of-cylindrical-pellets" title="Permalink to this headline">¶</a></h3>
 <p>Ref.: <a class="reference external" href="https://www.jstage.jst.go.jp/article/kona/32/0/32_2015016/_article/-char/ja/">Marigo and Stitt (2015)</a></p>
+<p>The particle’s shape plays a key role in calibration process as it can affect all the other micro properties. One of the widely used particle shapes in pharmaceutical industry is cylindrical pallets. Marigo and Stitt have introduced a four-step workflow, summarized in the following table:</p>
 <p><img alt="uc4_11" src="_images/uc4_11.png" /></p>
-<p><img alt="uc4_12" src="_images/uc4_12.png" /></p>
 </div>
 </div>
 </div>
@@ -434,12 +433,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Use_Case_3_Create_store_and_explore_the%20relational_datanodes.html" title="previous page"><span class="section-number">3. </span>Creating, storing and exploring relational data-nodes in DB (from literature)</a>
-    <a class='right-next' id="next-link" href="Use_Case_5_Run_a_Successful_Calibration.html" title="next page"><span class="section-number">5. </span>Use Case 5 - Prepare, Run and Store a Successful Calibration</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="Use_Case_3_Create_store_and_explore_the%20relational_datanodes.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">3. </span>Creating, storing and exploring relational data-nodes in DB (from literature)</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Use_Case_5_Run_a_Successful_Calibration.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">5. </span>Use Case 5 - Prepare, Run and Store a Successful Calibration</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

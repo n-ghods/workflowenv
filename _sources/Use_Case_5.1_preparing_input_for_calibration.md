@@ -26,13 +26,13 @@ This use case describes how to prepare initial input for each calibration workfl
 
 ## Workflow
 
-This use-case can be specific to the calibration-method and the required input data-types the chosen calibration templates. Here we are using the Aspherix-5.2.1 calibration tool. Each calibration workflow is called "calibration template". And as for any DEM simulation, the required input files should be gathered. 
+This use-case can be specific to the calibration-method and the required input data-types the chosen calibration templates. Here we are using the Aspherix-5.2.1 calibration tool. The user cam employ the pre-defined templates in the Aspherix Calibration package to carry out the workflows. Each calibration workflow is called "calibration template". And as for any DEM simulation, the required input files should be gathered. 
 
 One can find more details on the Aspherix Documentation files, but here is a brief description of the required input scripts:
 
 **Calibration setup:** aspherix-calibration.casx
 
-**measurements: ** a directory containing text files with the measured quantities from experiment
+**measurements:** a directory containing text files with the measured quantities from experiment
 
 **settings:** a directory with text files with the required simulation settings:
 

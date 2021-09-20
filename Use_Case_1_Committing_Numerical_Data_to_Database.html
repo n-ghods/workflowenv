@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Committing Numerical Data to Database (from a Simulation) &#8212; Calibration Workflow Environment</title>
+    <title>1. Committing Numerical Data to a Database (from a Simulation) &#8212; Calibration Workflow Environment</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -251,7 +251,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-case-description">
@@ -259,8 +259,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#workflow">
-   1.2. Workflow
+  <a class="reference internal nav-link" href="#workflow-description">
+   1.2. Workflow description
   </a>
  </li>
 </ul>
@@ -274,8 +274,8 @@
         
               <div>
                 
-  <div class="section" id="committing-numerical-data-to-database-from-a-simulation">
-<h1><span class="section-number">1. </span>Committing Numerical Data to Database (from a Simulation)<a class="headerlink" href="#committing-numerical-data-to-database-from-a-simulation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="committing-numerical-data-to-a-database-from-a-simulation">
+<h1><span class="section-number">1. </span>Committing Numerical Data to a Database (from a Simulation)<a class="headerlink" href="#committing-numerical-data-to-a-database-from-a-simulation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="use-case-description">
 <h2><span class="section-number">1.1. </span>Use-Case description<a class="headerlink" href="#use-case-description" title="Permalink to this headline">¶</a></h2>
 <p>Sub-System: LIGGGHTS (distributed by DCS Computing GmbH)</p>
@@ -329,10 +329,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="workflow">
-<h2><span class="section-number">1.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<p>In order to store any numerical data to the data base, first a <strong>metadata</strong> file should be created to store the essential information about the committed data. For this aim, critical information about each submitted numerical dataset is obtained form the <em>logfile</em> of the executed simulation and is written to a <em><strong>metadata.json</strong></em> file with a unique identifier (uuid). This is done by <em>metadatawriter</em> python script.</p>
-<p>The data are mainly categorized based on their flow situations, in the data-base and structured as below:</p>
+<div class="section" id="workflow-description">
+<h2><span class="section-number">1.2. </span>Workflow description<a class="headerlink" href="#workflow-description" title="Permalink to this headline">¶</a></h2>
+<p>In order to store any numerical data to the data base, first a <strong>metadata</strong> file should be created to store the essential information about the committed data. For this aim, critical information about each submitted numerical dataset is obtained form the <em>logfile</em> of the executed simulation and is written to a <em><strong>metadata.json</strong></em> file with a unique identifier (uuid). This is done by “metadatawriter” python script.</p>
+<p>The data are mainly categorized based on their flow situations, in the database and structured as below:</p>
 <p><strong>Master Layout:</strong> database_CALIPER/&lt;<strong>flow situation</strong>&gt;/</p>
 <p>for instance:</p>
 <ul class="simple">
@@ -367,12 +367,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="prerequisites.html" title="previous page">Prerequisites</a>
-    <a class='right-next' id="next-link" href="Use_Case_2_Plotting_and_Reviewing_the_Numerical_Results.html" title="next page"><span class="section-number">2. </span>Plotting and reviewing the numerical results from a database entry</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="prerequisites.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Prerequisites</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Use_Case_2_Plotting_and_Reviewing_the_Numerical_Results.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Plotting and reviewing the numerical results from a database entry</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
