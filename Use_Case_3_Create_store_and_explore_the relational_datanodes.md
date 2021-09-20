@@ -29,7 +29,7 @@ This use case describes how to create relational data-nodes (e.g. any empirical 
 
 This feature is a python3 package developed by Richard Amering, as a part of his bachelor project. This package includes several modules, such as relationalData and numericalData, along with their specific metadata classes. 
 
-It also includes a high-level database interface to store and retrieve data-nodes to and from file-system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.
+It also includes a high-level database interface to store and retrieve datanodes to and from a file system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.
 
 For instance, one can create relational data node from an equation/correlation, given in literature:
 

@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Deciding about the calibration strategy (Meta-task)" href="Use_Case_4_Calibration_Strategy_%28Meta_task%29.html" />
+    <link rel="next" title="4. Calibration strategy Selection (Meta-task)" href="Use_Case_4_Calibration_Strategy_%28Meta_task%29.html" />
     <link rel="prev" title="2. Plotting and reviewing the numerical results from a database entry" href="Use_Case_2_Plotting_and_Reviewing_the_Numerical_Results.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -129,7 +129,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Use_Case_4_Calibration_Strategy_%28Meta_task%29.html">
-   4. Calibration strategy
+   4. Calibration strategy Selection
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -251,7 +251,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-case-description">
@@ -332,7 +332,7 @@
 <div class="section" id="workflow">
 <h2><span class="section-number">3.2. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
 <p>This feature is a python3 package developed by Richard Amering, as a part of his bachelor project. This package includes several modules, such as relationalData and numericalData, along with their specific metadata classes.</p>
-<p>It also includes a high-level database interface to store and retrieve data-nodes to and from file-system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.</p>
+<p>It also includes a high-level database interface to store and retrieve datanodes to and from a file system. The dataFactory module make it possible to create both types of data nodes from either python-functions or numeric collections.</p>
 <p>For instance, one can create relational data node from an equation/correlation, given in literature:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span> <span class="k">as</span> <span class="n">ln</span>
 
@@ -379,12 +379,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Use_Case_2_Plotting_and_Reviewing_the_Numerical_Results.html" title="previous page"><span class="section-number">2. </span>Plotting and reviewing the numerical results from a database entry</a>
-    <a class='right-next' id="next-link" href="Use_Case_4_Calibration_Strategy_%28Meta_task%29.html" title="next page"><span class="section-number">4. </span>Deciding about the calibration strategy (Meta-task)</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="Use_Case_2_Plotting_and_Reviewing_the_Numerical_Results.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Plotting and reviewing the numerical results from a database entry</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Use_Case_4_Calibration_Strategy_%28Meta_task%29.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">4. </span>Calibration strategy Selection (Meta-task)</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

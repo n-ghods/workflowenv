@@ -1,4 +1,4 @@
-How to archive a successful calibration case in our data base
+How to archive a successful calibration case in our database
 ======================
 
 Sub-System: Aspherix -or LIGGGHTS- (distributed by DCS Computing GmbH) and Orange3
@@ -8,7 +8,7 @@ This use case describes how to archive calibration data (incl. the metadata, sim
 
 | Section                             | Comment                                                      |
 | ----------------------------------- | ------------------------------------------------------------ |
-| Use Case Name                       | Archiving a successful calibration case in our data base     |
+| Use Case Name                       | Archiving a successful calibration case in our database      |
 | Scope                               | Loading information about data and metadata and transfer to a database |
 | Level                               | Top-Level data submission                                    |
 | Primary Actor                       | Researchers who wants to calibrate a DEM model, or analyze data of DEM simulations |

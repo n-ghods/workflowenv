@@ -27,6 +27,6 @@ This use case describes how the user can visualize the output and plot the resul
 
 Submitted data files can be visualized and analysed within the Orange3 environment. The files should be in the form of Excel (**.xlsx**), simple tab-delimited (**.txt**), comma-separated files (**.csv**) or URLs to be readable with the *File* widget in orange3 environment. Therefore the data with other formats, or discrete files can be read and rewritten into the above format using python. Depending on the data structure or the initial format of the available data (also dependent on the i/o file format of the DEM solver that has been used), the user might write his/her own script.
 
-For example, the bellowed workflow, demonstrates a simple workflow to read data from a number of shear flow simulations that are processed with some calculation widget and visulized.
+For example, the workflow below demonstrates an example to read data from a number of shear flow simulations, that are subsequently processed by applying some calculation widgets and visualized.
 
 ![uc2](../workflowenv/images/uc2.png)

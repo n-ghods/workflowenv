@@ -23,7 +23,7 @@ parts:
   - file: Use_Case_3_Create_store_and_explore_the relational_datanodes
     title: Working with relational data 
   - file: Use_Case_4_Calibration_Strategy_(Meta_task)
-    title: Calibration strategy 
+    title: Calibration strategy Selection
   - file: Use_Case_5_Run_a_Successful_Calibration
     title: Run a calibration task
     sections:

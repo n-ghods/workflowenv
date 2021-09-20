@@ -1,4 +1,4 @@
-Committing Numerical Data to Database (from a Simulation) 
+Committing Numerical Data to a Database (from a Simulation) 
 ======================
 
 ## Use-Case description
@@ -24,11 +24,11 @@ This use case describes how to commit data (incl. the metadata, simulation's inp
 | Frequency of Occurrence             | after every successful LIGGGHTS simulation run               |
 | Miscellaneous                       | -                                                            |
 
-## Workflow
+## Workflow description
 
-In order to store any numerical data to the data base, first a **metadata** file should be created to store the essential information about the committed data. For this aim, critical information about each submitted numerical dataset is obtained form the *logfile* of the executed simulation and is written to a ***metadata.json*** file with a unique identifier (uuid). This is done by *metadatawriter* python script.
+In order to store any numerical data to the data base, first a **metadata** file should be created to store the essential information about the committed data. For this aim, critical information about each submitted numerical dataset is obtained form the *logfile* of the executed simulation and is written to a ***metadata.json*** file with a unique identifier (uuid). This is done by "metadatawriter" python script.
 
-The data are mainly categorized based on their flow situations, in the data-base and structured as below:
+The data are mainly categorized based on their flow situations, in the database and structured as below:
 
 **Master Layout:** database_CALIPER/<**flow situation**>/
 
