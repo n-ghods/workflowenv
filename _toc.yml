@@ -7,7 +7,7 @@ root: landing_page
 parts:
 - caption: Getting started
   chapters:
-  - file: intro
+  - file: introduction
     title: Introduction to DEM calibration
   - file: Overview
     title: Overview
